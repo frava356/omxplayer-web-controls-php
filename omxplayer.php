@@ -45,7 +45,7 @@ setlocale(LC_ALL, 'ru_RU.UTF-8');
 	<body>
 		<center>
 			<?php
-			$files = glob(PATH.'/{*.[mM][kK][vV],*.[aA][vV][iI],*.[mM][pP][4]}', GLOB_BRACE | GLOB_MARK);
+			$files = glob(PATH.'/{*.[mM][kK][vV],*.[aA][vV][iI],*.[mM][pP][4],*.[mM][pP][3]}', GLOB_BRACE | GLOB_MARK);
 			//print_r($files);
 			$vids = array_filter ($files, function ($file) { if (substr($file,-1) != '/') return true;} ); //filter out directories
 			?>

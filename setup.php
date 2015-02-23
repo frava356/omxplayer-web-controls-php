@@ -10,7 +10,7 @@
 		<?php
 		error_reporting(E_ALL);
 		define('FIFO', getcwd().'/omxplayer_fifo');
-		$omxsh = "#!/bin/sh\nsudo sh -c \"./cls.sh\"\nomxplayer -p -o hdmi \"$1\" <".FIFO." >/dev/null 2>&1 &\nsleep 1\necho -n . >".FIFO."\n";
+		$omxsh = "#!/bin/sh\nsudo sh -c \"./cls.sh\"\nomxplayer -p -o both \"$1\" <".FIFO." >/dev/null 2>&1 &\nsleep 1\necho -n . >".FIFO."\n";
 
 		if ( @file_get_contents('omx_php.sh') != $omxsh ) {
 
